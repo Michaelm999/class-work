@@ -1,0 +1,76 @@
+img {
+  border: 4px solid yellow;
+  width: 150px;
+  height: 150px;
+}
+body {
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  font-family: "Comic Sans MS", sans-serif;
+}
+ul {
+  text-indent: none;
+  list-style-type: none;
+  padding: 0;
+}
+section {
+  text-align: center;
+  width: 400px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+img:hover {
+  border-color: red;
+}
+
+/* Apply to the main family tree image. */
+.tree img {
+  max-width: 1400px;
+  width: 100%;
+}
+
+/* Apply to the main header. */
+.tree .title {
+  color: crimson;
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+  font-size: 32px;
+}
+
+/* Apply to all of the family members' names by default. */
+.name {
+  font-weight: bold;
+  color: red;
+}
+
+/* Apply to all of the family members' names and the page title. */
+h1.title,
+h2.title,
+h3.title,
+h4.title {
+  font-family: "Times New Roman", serif;
+}
+
+/* Apply to all of Morticia's elements. */
+#morticia,
+#morticia h3 {
+  color: purple;
+}
+
+/* Apply to Lurch's name. */
+#lurch .name {
+  font-size: 24px;
+  color: green;
+}
+
+/* Apply by default to the list items within Wednesday Addams. */
+#wednesday li {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Apply to the list item within Wednesday Addams that is "Somber". */
+#wednesday li.somber {
+  text-decoration: underline;
+}
