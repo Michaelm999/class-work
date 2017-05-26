@@ -5,12 +5,10 @@ console.log("script linked!")
 //////////////////////////////
 
 // First build two objects 'mom' and 'dad' as object literals (e.g. 'var mom = {}'). If you have a non-traditional family structure, just use someone everybody loves, like Joe Biden or Oprah.
-var mom {
-name: 'Joan',
+var mom = {
 }
 
-var dad {name: 'Andy',
-}
+var dad = {}
 
 
 
@@ -24,7 +22,7 @@ console.log('dad object after step 1:', dad)
 
 // Create one Physicality object and one Personality object for each parent (e.g. 'mom.physicality = {}' and 'mom.personality = {}').
 mom.physicality = {figure: 'tall'}
-dad.physicality = {'short'}
+dad.physicality = {figure: 'short'}
 mom.personality = {nature: 'loving'}
 dad.personality = {nature: 'caring'}
 
@@ -74,7 +72,6 @@ dad.personality.favoriteActivities = 'sailing, cooking, football'
 dad.personality.loving = true
 
 
-
 // uncomment these console.logs after you write your code
 console.log('mom object after step 4:', mom)
  console.log('dad object after step 4:', dad)
@@ -85,13 +82,25 @@ console.log('mom object after step 4:', mom)
 
 // Now build yourself by referencing physical and personality attributes from your folks!
 
+var me = {}
+//personality
+me.physicality = {}
+me.physicality.height = (dad.physicality.height+mom.physicality.height)/2
+me.physicality.hair = dad.physicality.hair
+me.physicality.eyes = mom.physicality.eyes
+me.physicality.skin = mom.physicality.skin
+me.physicality.isHuman = mom.physicality.isHuman
 
-
-
+me.personality = {}
+me.personality.intelligence = mom.personality.intelligence
+me.personality.senseOfHumor = dad.personality.senseOfHumor
+me.personality.favoriteGenre = dad.personality.favoriteGenre
+me.personality.favoriteActivities = [mom.personality.favoriteActivities[0], dad.personality.favoriteActivities[0]]
+me.personality.loving = dad.personality.loving
 
 
 // uncomment this console.log after you write your code
-// console.log('me object after step 5:', me)
+ console.log('me object after step 5:', me)
 
 //////////////////////////////
 //          STEP 6          //
@@ -99,13 +108,16 @@ console.log('mom object after step 4:', mom)
 
 // Make 2 lists: first, what you're good at, and second, what you're bad at.
 
-
+me.skills = {
+  goodAt: ['comedy', 'running', 'research', 'skiing'],
+  badAt: ['talking', 'cooking', 'coding', 'speaking Spanish']
+}
 
 
 
 
 // uncomment this console.log after you write your code
-// console.log('me object after step 6:', me)
+ console.log('me object after step 6:', me)
 
 //////////////////////////////
 //          STEP 7          //
@@ -113,13 +125,11 @@ console.log('mom object after step 4:', mom)
 
 // Age yourself.
 
-
-
-
+me.age=26
 
 
 // uncomment this console.log after you write your code
-// console.log('me object after step 7:', me)
+console.log('me object after step 7:', me)
 
 //////////////////////////////
 //          STEP 8          //
@@ -127,13 +137,11 @@ console.log('mom object after step 4:', mom)
 
 // Delete half of the things you were good at.
 
-
-
-
+me.skills.goodAt.splice(me.skills.goodAt.length/2)
 
 
 // uncomment this console.log after you write your code
-// console.log('me object after step 8:', me)
+ console.log('me object after step 8:', me)
 
 //////////////////////////////
 //          STEP 9          //
@@ -141,13 +149,10 @@ console.log('mom object after step 4:', mom)
 
 // Age yourself (again).
 
-
-
-
-
+me.age++
 
 // uncomment this console.log after you write your code
-// console.log('me object after step 9:', me)
+console.log('me object after step 9:', me)
 
 //////////////////////////////
 //          STEP 10         //
@@ -155,13 +160,13 @@ console.log('mom object after step 4:', mom)
 
 // Add 'sitting' to the things you're good at and remove everything else from the list.
 
-
+me.skills.goodAt = ['sitting']
 
 
 
 
 // uncomment this console.log after you write your code
-// console.log('me object after step 10:', me)
+ console.log('me object after step 10:', me)
 
 //////////////////////////////
 //          STEP 11         //
@@ -169,13 +174,11 @@ console.log('mom object after step 4:', mom)
 
 // Add 5 more things to the list of things you're bad at.
 
-
-
-
+me.skills.badAt.push('basketball', 'doing taxes', 'reading minds', 'golf', 'shopping')
 
 
 // uncomment this console.log after you write your code
-// console.log('me object after step 11:', me)
+console.log('me object after step 11:', me)
 
 //////////////////////////////
 //           BONUS          //
@@ -183,8 +186,10 @@ console.log('mom object after step 4:', mom)
 
 // Create a method that prints out one of your classic sayings!
 
-
-
+me.speak = function () {
+  console.log("I'm sorry. I just got here. What the Hell?")
+}
+me.speak();
 
 
 
