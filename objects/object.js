@@ -74,7 +74,7 @@ dad.personality.loving = true
 
 // uncomment these console.logs after you write your code
 console.log('mom object after step 4:', mom)
- console.log('dad object after step 4:', dad)
+console.log('dad object after step 4:', dad)
 
 //////////////////////////////
 //          STEP 5          //
@@ -100,7 +100,7 @@ me.personality.loving = dad.personality.loving
 
 
 // uncomment this console.log after you write your code
- console.log('me object after step 5:', me)
+console.log('me object after step 5:', me)
 
 //////////////////////////////
 //          STEP 6          //

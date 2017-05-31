@@ -14,29 +14,29 @@ function moveBy10() {
 
 function showWaldo() {
   // make waldo visible
-  document.getElementById("waldo").style.visibility = 'visible';
+  waldo.style.opacity = 1;
 }
 
 function hideWaldo() {
   // make waldo invisible
-  document.getElementById("waldo").style.visibility = 'hidden';
+  waldo.style.opacity = 0;
 }
 
 function moveAtRandom() {
   howManyPixelsTop = (Math.random() * 200);
   howManyPixelsLeft = (Math.random() * 800);
   console.log(this);
-  hideWaldo();
   // edit this style's top and left
   // hide waldo
   waldo.style.top = howManyPixelsTop + 'px';
   waldo.style.left = howManyPixelsLeft + 'px';
+  hideWaldo();
 }
 
 function startGame() {
   setTimeout(function() {
     // add event listener to show waldo (show waldo) on mouse enter
-  addEventListener('mouseover', showWaldo);
+  addEventListener('mouseenter', showWaldo);
     // hide the button (hint: change style to display none)
   addEventListener('click', moveAtRandom);
   document.getElementById("startGame").style.display = 'none';

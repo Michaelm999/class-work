@@ -1,0 +1,69 @@
+/*body {
+  background: salmon; /* For browsers that do not support gradients */
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.options, .plays {
+  border: 1px solid black;
+  margin: 20px;
+  background-size: 100%;
+}
+
+.options {
+  height: 148px;
+  width: 150px;
+}
+
+.plays {
+  height: 178px;
+  width: 180px;
+}
+
+.userMove {
+  background-image: url('https://github.com/ga-students/WDI_SM_47/blob/master/work/02_week/ah_tuesday/rps_with_jquery/solution_code/assets/userMove.png?raw=true');
+}
+
+.compMove {
+  background-image: url('https://github.com/ga-students/WDI_SM_47/blob/master/work/02_week/ah_tuesday/rps_with_jquery/solution_code/assets/compMove.png?raw=true');
+}
+
+.rock {
+  background-image: url('https://github.com/ga-students/WDI_SM_47/blob/master/work/02_week/ah_tuesday/rps_with_jquery/solution_code/assets/rock.png?raw=true');
+}
+
+.paper {
+  background-image: url('https://github.com/ga-students/WDI_SM_47/blob/master/work/02_week/ah_tuesday/rps_with_jquery/solution_code/assets/paper.png?raw=true');
+}
+
+.scissors {
+  background-image: url('https://github.com/ga-students/WDI_SM_47/blob/master/work/02_week/ah_tuesday/rps_with_jquery/solution_code/assets/scissors.png?raw=true');
+}
+
+.endTournament {
+  font-size: 20px;
+  background-color: lavenderBlush;
+  margin-top: 3px;
+}
+
+#messageBox {
+  height: 130px;
+  text-align: center;
+}
+
+#message {
+  font-size: 70px;
+}
+
+#scores, th {
+  text-align: center;
+}
+
+#scores {
+  width: 50px;
+}*/
+.red {
+  color: red;
+}

@@ -22,7 +22,11 @@ var album1 = {
 };
 
 var sire = album1.label;
- var title77 = document.getElementsByName('album1').title = "Talking Heads: 77"
+
+
+ var title77 = document.getElementsByClassName('album1')[0];
+ title77.innerHTML = "Talking Heads: 77";
+
 // 1. Retrieve the string "Sire" from album1, and save it in a sensibly named
 //    variable.
 
