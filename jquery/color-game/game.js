@@ -1,19 +1,17 @@
-$( document ).ready(function() {
-  console.log( 'ready!' );
-});
 //variables
 var redButton = $('.redButton');
 var blueButton = $('.blueButton');
 var greenButton = $('.greenButton');
 var purpleButton = $('.purpleButton');
-var container = $('h1.text');
 var StartButton = $('.start');
 var color = ['red', 'blue', 'green', 'purple'];
-var colorstart = color[Math.floor(Math.random() * color.length)];
+var colorstart = function() {
+  return color[Math.floor(Math.random() * color.length)]
+};
 var turn = 1;
 var score = 0;
 var entry = $('h1');
-var button = $('.button')
+var button = $('.button');
 
 
 //functions
@@ -36,17 +34,20 @@ $('.start').click(function(){
   setTimeout(function(){
     alert('time up. Game Over')
   }, 30000)
-  container.css({background: colorstart})
-})
+  $('h1').text(colorstart())
+  setTimeout(function(){
+    alert("Your score is "+score)}, 30000)
+});
 
 //Keep score and set next color
-$('.button').click(function(){
-if(entry.background == container.background) {
+button.click(function() {
+  if (entry.text === button.text) {
   console.log("correct!")
-  score++
-  } else {
+  score+=1
+  }
+  else {
   console.log('incorrect')
-  score-3
-  }turn++
-  container.css({background: colorstart})
-})
+  score-=3
+  }
+  $('h1').text(colorstart())
+});

@@ -1,14 +1,23 @@
 #board {
+  /* we add 30 pixels to the width and height of the container
+  to accomodate for the borders of the boxes within */
   width: 630px;
   height: 630px;
+
   border: 5px solid #242424;
   margin: 0 auto;
 }
+
 #board div {
   width: 200px;
   height: 200px;
-  border: 5px solid black;
-  float:left;
-text-align: center;
-font-size: 50px;
+  border: 5px solid #444444;
+
+  /* make each box float to the left of the box that comes after it: */
+  float: left;
+
+  /* enlarge + center the X's and O's within each box: */
+  text-align:center;
+  font-size: 48px;
+  line-height: 200px;
 }
