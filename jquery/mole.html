@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
+    <title>Guacamole</title>
+    <style media="screen">
+      .container {background: black; width: 375px}
+      .hole {
+        background: green;
+        width: 100px; height: 100px;
+        margin: 10px;
+        display: inline-block;
+        color: white;
+        font-size: 50px;
+        vertical-align: top;
+        text-align: center;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class='score-box'>Score</h2>
+    <div class="container">
+       <div class="hole"></div>
+       <div class="hole"></div>
+       <div class="hole"></div>
+       <div class="hole"></div>
+       <div class="hole"></div>
+       <div class="hole"></div>
+       <div class="hole"></div>
+       <div class="hole"></div>
+       <div class="hole"></div>
+     </div>
+     <script type="text/javascript">
+       var holes = $('.hole')
+       var scoreBox = $('.score-box')
+        var game = {
+
+          score: 0
+        }
+
+     $(holes[randomInt(9)]).html('<img src="http://images.clipartpanda.com/mole-clip-art-clipart-cartoon-mole-8699.png" alt="">')
+
+      holes.on('click', function() {
+        if ($(this).html() == '<img src="http://images.clipartpanda.com/mole-clip-art-clipart-cartoon-mole-8699.png" alt="">') {
+        console.log("you hit the Mole")
+        //increase the score
+        game.score = game.score + 10
+        console.log(game.score)
+        scoreBox.text('Score '+game.score)
+        $(this).text('')
+        //move the Mole
+        var nextHole = randomInt(9)
+        console.log(nextHole);
+        $(holes[nextHole]).html('<img src="http://images.clipartpanda.com/mole-clip-art-clipart-cartoon-mole-8699.png" alt="">')
+        } else {
+      console.log("you missed!")
+        }
+      })
+
+      function randomInt(upTo) {
+      return Math.floor(Math.random()*upTo)
+      }
+      //puts 30 seocnds on the clock
+      var count = 30
+      function setInterval() {
+          if (count >= 0) {
+            count--;
+          }
+          if (count = 0) {
+            alert("out of time")
+          }
+        }
+    setInterval();
+    
+    setTimeout(function(){
+      alert('time up. Game Over')
+    }, 30000)
+        function switchTurns() {
+          if(game.currentPlayer == game.player1) {
+            game.currentPlayer = game.player2
+          } else {
+            game.currentPlayer = game.player1
+          }
+        }
+     </script>
+  </body>
+</html>

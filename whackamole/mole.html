@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <script
-      src="https://code.jquery.com/jquery-3.2.1.js"
-      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-      crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
     <title></title>
     <style media="screen">
     #board {
@@ -16,7 +16,6 @@
       border: 5px solid #444444;
       margin: 0 auto;
     }
-
     #board div {
       width: 100px;
       height: 100px;
@@ -28,19 +27,38 @@
   </head>
   <body>
     <div id="board">
-      <div id="0"></div>
-      <div id="1"></div>
-      <div id="2"></div>
-      <div id="3"></div>
-      <div id="4"></div>
-      <div id="5"></div>
-      <div id="6"></div>
-      <div id="7"></div>
-      <div id="8"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
     </div>
     <script type="text/javascript">
       var score=0;
-      var
+      var tile = $('.tile')
+      var gameBoard = $('.board')
+      var gameRunning = true
+function randomInt {
+        moleHole = math.floor(Math.random() * gameBoard.length)
+        $('<h1>M</h1>').appendTo('.tile'+moleHole).attribute
+}
+      function endGame() {
+          alert("Game Over! Score: " + score);
+          gameRunning = false;
+      }
+      if (gameRunning) {
+          setTimeout(endGame, 5000);
+          $(".tile").each(function() {
+              hideMole(this);
+          });
+      }
+
+
+
     </script>
   </body>
 </html>
