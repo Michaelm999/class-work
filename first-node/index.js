@@ -10,11 +10,10 @@ if (request.url == '/banana') {
 } else if (request.url == '/wdi'){
   responseText = 'is great!'
 }
-if (request.url != '/favicon.ico') {
-  var log = request.method + ' ' + request.url + ' ' + Date.now() + '/n'
-  fs.appendFile('./log.txt', log)
-}
-
+// if (request.url != '/favicon.ico') {
+//   var log = request.method + ' ' + request.url + ' ' + Date.now() + '/n'
+//   fs.appendFile('./log.txt', log)
+// }
 
  response.write(responseText)
  response.end()
