@@ -1,5 +1,7 @@
 var http = require('http')
+var fs = require('fs')
 var toolkit = require('./circle.js')
+
 var server = http.createServer(function(request, response) {
 var responseText = 'Hello from localhost:3000!'
 
@@ -8,6 +10,12 @@ if (request.url == '/banana') {
 } else if (request.url == '/wdi'){
   responseText = 'is great!'
 }
+if (request.url != '/favicon.ico') {
+  var log = request.method + ' ' + request.url + ' ' + Date.now()
+}
+
+
+
  response.write(responseText)
  response.end()
 })
