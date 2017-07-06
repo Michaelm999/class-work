@@ -1,17 +1,19 @@
 const fs = require('fs')
 const http = require('http')
-
+function lyrics(song, res) {
+  res.end(fs.readFileSync(song).toString())
+}
 var data = fs.readFileSync('baby.txt')
 var lyrics = fs.readFileSync('yellow.txt')
 var espana = fs.readFileSync('despacio.txt')
 
 function requestHandler(req, res) {
   if (req.url == '/baby') {
-  res.end(data.toString())
+  lyrics('baby.txt', res)
 } else if (req.url == '/yellow') {
-res.end(lyrics.toString())
+lyrics('yellow.txt', res)
 } else if (req.url == '/despacio'){
-  res.end(espana.toString())
+  lyrics('despacio.txt', res)
 }
 else {
   res.end('Hi '+req.url)
