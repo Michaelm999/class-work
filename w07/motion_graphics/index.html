@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Motion Graphics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js">
+
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var x = 0
+    var ball = {x: 200, y: 400}
+
+    function setup() {
+    createCanvas(400, 400)
+    frameRate(12)
+    }
+
+    function draw() {
+    background(200)
+    fill('red')
+    rect(x,0, 20,20)
+    x = x+1
+    if (x > width){x - 1}
+    ellipse(ball.x, ball.y, 20, 20)
+      ball.y = ball.y - 2
+      if (ball.y < 0){ball.y = 400}
+    }
+
+    function mousePressed() {
+      ball.x = mouseX
+    }
+
+    </script>
+  </body>
+</html>
