@@ -32,9 +32,42 @@ Book.create({
   isbn: 667
 })
 
+//create a CRUD router for books
+//books index
 app.get('/books', function(req,res) {
   Book.find({}, function(err, allThemBooks) {
     res.send(allThemBooks)
+  })
+})
+//show a book
+app.get('/books/:id', function(req, res){
+  console.log(req.params.id)
+  Book.findById(req.params.id, function(err, bookFound) {
+    if(err) return console.log(err)
+    res.send(bookFound)
+  })
+})
+//create a book
+app.post('/books', function(req, res) {
+  Book.create(req.body, function (err, newBook) {
+    if(err) return console.log(err)
+    res.json({message: "Book added!", book: newBook})
+  })
+})
+
+//update a robot
+app.patch('/books/:id', function(req, res) {
+  Book.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, updatedBook) {
+    if(err) return console.log(err)
+    res.json({message: "Book updated!", book: updatedBook})
+  })
+})
+
+// destroy a book
+app.delete('/books/:id', function(req, res) {
+  Book.findByIdAndRemove(req.params.id, function(err, deletedBook) {
+    if(err) return console.log(err)
+    res.json({message: "Book Burned!", book: deletedBook})
   })
 })
 
